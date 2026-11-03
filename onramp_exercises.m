@@ -42,3 +42,16 @@ function x = solve_lin(theta)
     b = [1; 1];
     x = A\b; 
 end
+
+%% 44948 : damped sinuoid
+
+function y = damped_cos(lambda, T, N)
+   t = linspace(0, T, N);
+   for i = 1:N
+   vec1(i) = exp(-(t(i)*lambda))*cos(t(i)*2*pi);
+   end
+   y = vec1;
+end
+
+
+%% 
